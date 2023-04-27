@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Webpage Manager",
+  "version": "1.0",
+  "description": "Manage webpages on the screen",
+  "action": {
+    "default_icon": "icons/icon16.png",
+    "default_popup": "popup.html",
+    "default_title": "Manage webpages"
+  },
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon16.png",
+      "128": "icons/icon16.png"
+    }
+  }
+}
