@@ -20,3 +20,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
   }
 });
+
+// Send a message to indicate that the content script has been injected
+chrome.runtime.sendMessage({ action: "contentScriptInjected" });
